@@ -40,6 +40,33 @@
         <text>外国菜谱</text>
       </view>
     </view>
+
+    <!-- 标题 -->
+    <view class="cu-bar bg-white margin-top">
+      <view class="action">
+        <text class="cuIcon-title text-green"></text>
+        <text class="text-xl text-bold">最热推荐</text>
+      </view>
+    </view>
+    <!-- 列表 -->
+    <view class="list row bg-white" style="">
+      <view class="col-8">
+        <image class="solid" src="http://pic.soucaipu.cn/allimg/c191230/15MC1234A560-15Q4.jpg" mode="widthFix"></image>
+        <text class="margin-top-xs">最热菜谱</text>
+      </view>
+      <view class="col-8">
+        <image class="solid" src="http://pic.soucaipu.cn/allimg/c200211/15Q40942IB20-63N7.jpg" mode="widthFix"></image>
+        <text class="margin-top-xs">酱汁烤五花肉</text>
+      </view>
+      <view class="col-8">
+        <image class="solid" src="http://pic.soucaipu.cn/allimg/c191230/15MBF5122130-12539.jpg" mode="widthFix"></image>
+        <text class="margin-top-xs">韩式酸辣炒饭</text>
+      </view>
+      <view class="col-8">
+        <image class="solid" src="http://pic.soucaipu.cn/allimg/c200211/15Q406251bP-43A6.jpg" mode="widthFix"></image>
+        <text class="margin-top-xs">玫瑰糟汁五花肉</text>
+      </view>
+    </view>
   </view>
 </template>
 
@@ -88,8 +115,8 @@
       padding: 10upx 8%;
 
       image {
-        width: 100upx;
-        height: 100upx;
+        width: 80upx;
+        height: 80upx;
       }
 
       text {
@@ -98,6 +125,32 @@
         color: #1CBBB4;
       }
     }
+  }
 
+  .list {
+    &>view {
+      text-align: center;
+      overflow: hidden;
+      padding: 3% 4%;
+      margin-bottom: 15upx;
+
+      // &:first-child{
+      //   padding-left: 6%;
+      // }
+      // &:last-child{
+      //   padding-right: 6%;
+      // }
+
+      image {
+        width: 190upx;
+        // height: 80upx;
+      }
+
+      text {
+        display: block;
+        font-size: 14px;
+        color: #1CBBB4;
+      }
+    }
   }
 </style>
