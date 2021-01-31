@@ -156,3 +156,14 @@ Vue.component('cu-custom', cuCustom)
 现在的运行效果图，仅仅是个导航栏样式而已。
 
 <img src="assets/image-20210131172416476.png" alt="image-20210131172416476" style="zoom:50%;" />
+
+
+
+## 自定义底部导航栏tabBar
+
+在uni-app官方文档搜索关键字 tabbar，查看详细开发文档
+
+[tabBar](https://uniapp.dcloud.io/collocation/pages?id=tabbar)
+
+这里我们先复制下方的代码示例，然后再进行改造
+
