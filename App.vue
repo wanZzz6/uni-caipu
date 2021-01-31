@@ -40,4 +40,5 @@
   @import "colorui/main.css";
   @import "colorui/icon.css";
   /* 你的项目css */
+  @import "common/main.css";
 </style>

@@ -13,6 +13,33 @@
         <video :src="item.url" autoplay loop muted :show-play-btn="false" :controls="false" objectFit="cover" v-if="item.type=='video'"></video>
       </swiper-item>
     </swiper>
+
+    <view class="tools row bg-white">
+      <view class="col-8">
+        <image src="../../static/tools/navbg0.png" mode="widthFix"></image>
+        <text>最热菜谱</text>
+      </view>
+      <view class="col-8">
+        <image src="../../static/tools/navbg1.png" mode="widthFix"></image>
+        <text>最热菜谱</text>
+      </view>
+      <view class="col-8">
+        <image src="../../static/tools/navbg2.png" mode="widthFix "></image>
+        <text>美食专题</text>
+      </view>
+      <view class="col-8">
+        <image src="../../static/tools/navbg3.png" mode="widthFix "></image>
+        <text>家常菜谱</text>
+      </view>
+      <view class="col-8">
+        <image src="../../static/tools/navbg4.png" mode="widthFix "></image>
+        <text>中国菜谱</text>
+      </view>
+      <view class="col-8">
+        <image src="../../static/tools/navbg5.png" mode="widthFix "></image>
+        <text>外国菜谱</text>
+      </view>
+    </view>
   </view>
 </template>
 
@@ -45,10 +72,32 @@
   }
 </script>
 
-<style>
+<style lang="less">
   .tower-swiper .tower-item {
     transform: scale(calc(0.5 + var(--index) / 10));
     margin-left: calc(var(--left) * 100upx - 150upx);
     z-index: var(--index);
+  }
+
+  .content {}
+
+  .tools {
+    &>view {
+      text-align: center;
+      overflow: hidden;
+      padding: 10upx 8%;
+
+      image {
+        width: 100upx;
+        height: 100upx;
+      }
+
+      text {
+        display: block;
+        font-size: 14px;
+        color: #1CBBB4;
+      }
+    }
+
   }
 </style>

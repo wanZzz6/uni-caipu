@@ -1,0 +1,73 @@
+.clear {
+  clear: both;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.row {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 小屏幕 */
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col-13,
+.col-14,
+.col-15,
+.col-16,
+.col-17,
+.col-18,
+.col-19,
+.col-20,
+.col-21,
+.col-22,
+.col-23,
+.col-24 {
+  float: left;
+}
+
+.col-1 {
+  width: 4.16%;
+}
+
+.col-2 {
+  width: 8.3%;
+}
+
+.col-3 {
+  width: 12.5%;
+}
+
+.col-4 {
+  width: 16.6%;
+}
+
+.col-5 {
+  width: 20.83%;
+}
+
+.col-6 {
+  width: 25%;
+}
