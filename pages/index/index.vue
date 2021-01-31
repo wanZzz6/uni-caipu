@@ -4,6 +4,15 @@
       <block slot="backText">返回</block>
       <block slot="content">首页</block>
     </cu-custom>
+
+    <!-- 轮播图 -->
+    <swiper class="screen-swiper" :class="dotStyle?'square-dot':'round-dot'" :indicator-dots="true" :circular="true"
+      :autoplay="true" interval="5000" duration="500">
+      <swiper-item v-for="(item,index) in swiperList" :key="index">
+        <image :src="item.url" mode="aspectFill" v-if="item.type=='image'"></image>
+        <video :src="item.url" autoplay loop muted :show-play-btn="false" :controls="false" objectFit="cover" v-if="item.type=='video'"></video>
+      </swiper-item>
+    </swiper>
   </view>
 </template>
 
@@ -11,8 +20,25 @@
   export default {
     data() {
       return {
-        title: 'Hello'
-      }
+        swiperList: [{
+          id: 0,
+          type: 'image',
+          url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg'
+        }, {
+          id: 1,
+          type: 'image',
+          url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg',
+        }, {
+          id: 2,
+          type: 'image',
+          url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg'
+        }, {
+          id: 3,
+          type: 'image',
+          url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'
+        }],
+        dotStyle: true,
+      };
     },
     onLoad() {},
     methods: {}
@@ -20,21 +46,9 @@
 </script>
 
 <style>
-  .content {
-    display: flex;
-    /* 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    */
-  }
-
-  .logo {
-    height: 200rpx;
-    width: 200rpx;
-    margin-top: 200rpx;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50rpx;
+  .tower-swiper .tower-item {
+    transform: scale(calc(0.5 + var(--index) / 10));
+    margin-left: calc(var(--left) * 100upx - 150upx);
+    z-index: var(--index);
   }
 </style>
